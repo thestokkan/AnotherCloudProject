@@ -33,14 +33,14 @@ public class AnotherCloudProjectApplication {
     return request.getHeader("User-Agent");
   }
 
-//  @GetMapping("/db")
-//  public void db() {
-//    try {
-//      Connection c = dataSource.getConnection();
-//      Statement stmt = c.createStatement();
-//      stmt.execute("SELECT 1");
-//    } catch (SQLException e) {
-//      e.printStackTrace();
-//    }
-//  }
+  @GetMapping("/db")
+  public void db() {
+    try {
+      Connection c = dataSource.getConnection();
+      Statement stmt = c.createStatement();
+      stmt.execute("SELECT 1");
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+  }
 }
